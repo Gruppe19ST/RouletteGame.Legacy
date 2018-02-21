@@ -12,7 +12,7 @@
         public string PlayerName { get; }
         public uint Amount { get; }
 
-        public virtual uint WonAmount(Field field)
+        public virtual uint WonAmount(IField field)
         {
             return 0;
         }
@@ -27,7 +27,7 @@
             _fieldNumber = fieldNumber;
         }
 
-        public override uint WonAmount(Field field)
+        public override uint WonAmount(IField field)
         {
             if (field.Number == _fieldNumber) return 36*Amount;
             return 0;
@@ -48,7 +48,7 @@
             _color = color;
         }
 
-        public override uint WonAmount(Field field)
+        public override uint WonAmount(IField field)
         {
             if (field.Color == _color) return 2*Amount;
             return 0;
@@ -84,7 +84,7 @@
             _even = even;
         }
 
-        public override uint WonAmount(Field field)
+        public override uint WonAmount(IField field)
         {
             if (field.Even == _even) return 2*Amount;
             return 0;

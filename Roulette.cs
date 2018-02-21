@@ -61,7 +61,7 @@ namespace RouletteGame.Legacy
             _result = _fields[(int) n];
         }
 
-        public Field GetResult()
+        public IField GetResult()
         {
             return _result;
         }

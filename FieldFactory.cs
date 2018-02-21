@@ -8,13 +8,14 @@ namespace RouletteGame.Legacy
 {
     public class FieldFactory
     {
-        static List<IField> _fields = new List<IField>();
+        
 
         public FieldFactory()
         { }
 
         static public List<IField> CreateFields()
         {
+            List<IField> fields = new List<IField>();
 
             for (int i = 0; i < 36; i++)
             {
@@ -22,20 +23,20 @@ namespace RouletteGame.Legacy
                 {
                     if (i == 0)
                     {
-                        _fields.Add(new Field(Convert.ToUInt32(i), Field.Green));
+                        fields.Add(new Field(Convert.ToUInt32(i), Field.Green));
                     }
                     else
                     {
-                        _fields.Add(new Field(Convert.ToUInt32(i),Field.Black));
+                        fields.Add(new Field(Convert.ToUInt32(i),Field.Black));
                     }
                 }
                 else if (i % 2 != 0)
                 {
-                    _fields.Add(new Field(Convert.ToUInt32(i), Field.Red));
+                    fields.Add(new Field(Convert.ToUInt32(i), Field.Red));
                 }
             }
 
-            return _fields;
+            return fields;
 
 
 
