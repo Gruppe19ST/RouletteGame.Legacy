@@ -6,11 +6,13 @@ namespace RouletteGame.Legacy
     public class Roulette : IRoulette
     {
         private readonly List<IField> _fields;
+        private IFieldFactory _factory;
         private IField _result;
 
-        public Roulette()
+        public Roulette(IFieldFactory factory)
         {
-            _fields = FieldFactory.CreateFields();
+            _factory = factory;
+            _fields = _factory.CreateFields();
             //_fields = new List<Field>
             //{
             //    new Field(0, Field.Green),
