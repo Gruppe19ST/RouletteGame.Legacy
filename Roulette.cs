@@ -8,10 +8,12 @@ namespace RouletteGame.Legacy
         private readonly List<IField> _fields;
         private IFieldFactory _factory;
         private IField _result;
+        private IRandomizer _random;
 
-        public Roulette(IFieldFactory factory)
+        public Roulette(IFieldFactory factory, IRandomizer random)
         {
             _factory = factory;
+            _random = random;
             _fields = _factory.CreateFields();
             //_fields = new List<Field>
             //{
@@ -59,7 +61,7 @@ namespace RouletteGame.Legacy
 
         public void Spin()
         {
-            var n = (uint) new Random().Next(0, 37);
+            var n = _random.Next();
             _result = _fields[(int) n];
         }
 
