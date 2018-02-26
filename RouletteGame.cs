@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace RouletteGame.Legacy
 {
-    public class RouletteGame
+    public class Roulettespil
     {
         private readonly List<IBet> _bets;
         private readonly IRoulette _roulette;
         private bool _roundIsOpen;
 
-        public RouletteGame(IRoulette roulette)
+        public Roulettespil(IRoulette roulette)
         {
             _bets = new List<IBet>();
             _roulette = roulette;

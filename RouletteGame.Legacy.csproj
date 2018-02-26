@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bet.cs" />
+    <Compile Include="Bet\Bet.cs" />
+    <Compile Include="Bet\ColorBet.cs" />
+    <Compile Include="Bet\EvenOddBet.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="DefaultFieldFactory.cs" />
-    <Compile Include="IBet.cs" />
+    <Compile Include="Bet\FieldBet.cs" />
+    <Compile Include="Bet\IBet.cs" />
     <Compile Include="IField.cs" />
     <Compile Include="IFieldFactory.cs" />
     <Compile Include="IRandomizer.cs" />
