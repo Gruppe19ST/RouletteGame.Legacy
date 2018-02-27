@@ -58,6 +58,7 @@
     <Compile Include="Fakes\StubField.cs" />
     <Compile Include="RouletteGameUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roulette\RouletteUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

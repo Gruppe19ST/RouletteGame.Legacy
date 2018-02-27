@@ -51,10 +51,10 @@
     <Compile Include="IField.cs" />
     <Compile Include="IFieldFactory.cs" />
     <Compile Include="IRandomizer.cs" />
-    <Compile Include="IRoulette.cs" />
+    <Compile Include="Roulette\IRoulette.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Randomizer.cs" />
-    <Compile Include="Roulette.cs" />
+    <Compile Include="Roulette\Roulette.cs" />
     <Compile Include="RouletteGame.cs" />
     <Compile Include="RouletteGameTestApplication.cs" />
   </ItemGroup>
